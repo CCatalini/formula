@@ -1,0 +1,69 @@
+@startuml
+
+interface Function {
+    + accept(Visitor)
+}
+
+class Value implements Function{
+    value: double
+}
+class Variable implements Function{
+    identifier: string
+}
+class Add implements Function{
+    left: Function
+    right: Function
+}
+class Multiply implements Function{
+    left: Function
+    right: Function
+}
+class Divide implements Function{
+    left: Function
+    right: Function
+}
+class Subtract implements Function{
+    left: Function
+    right: Function
+}
+class Negate implements Function{
+    value: Function
+}
+class Sqrt implements Function{
+    value: Function
+}
+class Power implements Function{
+    base: Function
+    exponent: Function
+}
+class Absolute implements Function{
+    value: Function
+}
+
+interface Visitor{
+    + visit(Absolute)
+    + visit(Addition)
+    + visit(Division)
+    + visit(Multiplication)
+    + visit(Negate)
+    + visit(Sqrt)
+    + visit(Subtraction)
+    + visit(Value)
+    + visit(Variable)
+}
+
+Function -> Visitor
+
+class PrinterVisitor implements Visitor{
+    + print(Function)
+}
+
+class evaluatorVisitor implements Visitor{
+    + evaluate(Function)
+}
+
+class variableGetterVisitor implements Visitor{
+    + getVariables(Function)
+}
+
+@enduml
