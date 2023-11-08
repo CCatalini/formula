@@ -1,4 +1,4 @@
-package edu.austral.ingsis.math;
+package edu.austral.ingsis.math.composite;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import edu.austral.ingsis.math.composite.*;
