@@ -1,10 +1,7 @@
 package edu.austral.ingsis.math.composite;
 
-import edu.austral.ingsis.math.composite.*;
-import edu.austral.ingsis.math.composite.Number;
 import org.junit.Test;
 
-import java.awt.event.MouseListener;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
